@@ -1,4 +1,4 @@
-var
+const
 	gulp	= require('gulp'),
 	sass	= require('gulp-sass'),
 	babel = require('gulp-babel'),
@@ -16,11 +16,9 @@ gulp.task('sass', () =>
 
 // ES6コンパイル (Babel)
 gulp.task('babel', () =>
-	gulp.src('../babel/*.js')
-	.pipe(babel({
-		presets: ['es2015']
-	}))
-	.pipe(gulp.dest('../htdocs/js/'))
+	gulp.src('../babel/*.es6')
+	.pipe(babel())
+	.pipe(gulp.dest('../htdocs/js'))
 );
 
 // ローカルサーバ立ち上げ
@@ -44,5 +42,5 @@ gulp.task('seq-reload', () =>
 
 // 'gulp'だけで実行できるようdefaultタスクを設定
 gulp.task('default', ['connect'], () =>
-	gulp.watch(['../htdocs/*.html', '../htdocs/css/*.scss', '../htdocs/img/*.png'], ['sass-reload'])
+	gulp.watch(['../htdocs/*.html', '../scss/*.scss', '../babel/*.es6', '../htdocs/img/*.png'], ['seq-reload'])
 );

@@ -14,9 +14,7 @@ gulp.task('sass', function () {
 
 // ES6コンパイル (Babel)
 gulp.task('babel', function () {
-	return gulp.src('../babel/*.js').pipe(babel({
-		presets: ['es2015']
-	})).pipe(gulp.dest('../htdocs/js/'));
+	return gulp.src('../babel/*.es6').pipe(babel()).pipe(gulp.dest('../htdocs/js'));
 });
 
 // ローカルサーバ立ち上げ
@@ -39,5 +37,5 @@ gulp.task('seq-reload', function () {
 
 // 'gulp'だけで実行できるようdefaultタスクを設定
 gulp.task('default', ['connect'], function () {
-	return gulp.watch(['../htdocs/*.html', '../htdocs/css/*.scss', '../htdocs/img/*.png'], ['sass-reload']);
+	return gulp.watch(['../htdocs/*.html', '../scss/*.scss', '../babel/*.es6', '../htdocs/img/*.png'], ['seq-reload']);
 });
