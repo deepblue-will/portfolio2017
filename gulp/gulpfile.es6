@@ -16,8 +16,10 @@ gulp.task('sass', () =>
 
 // ES6コンパイル (Babel)
 gulp.task('babel', () =>
-	gulp.src('../babel/*.es6')
-	.pipe(babel())
+	gulp.src('../es6/*.es6')
+	.pipe(babel({
+		presets: ['../gulp/node_modules/babel-preset-es2015']
+	}))
 	.pipe(gulp.dest('../htdocs/js'))
 );
 
@@ -41,6 +43,6 @@ gulp.task('seq-reload', () =>
 );
 
 // 'gulp'だけで実行できるようdefaultタスクを設定
-gulp.task('default', ['connect'], () =>
+gulp.task('default', ['connect', 'sass', 'babel'], () =>
 	gulp.watch(['../htdocs/*.html', '../scss/*.scss', '../babel/*.es6', '../htdocs/img/*.png'], ['seq-reload'])
 );
