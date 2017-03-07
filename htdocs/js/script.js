@@ -1,10 +1,25 @@
 'use strict';
 
-var React = require('react');
-var ReactDOM = require('react-dom');
+var _react = require('react');
 
-setTimeout(function () {
-        var hoge = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "ほげ";
+var _react2 = _interopRequireDefault(_react);
 
-        console.log(hoge);
-}, 500);
+var _reactDom = require('react-dom');
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Hello = _react2.default.createClass({
+	displayName: 'Hello',
+
+	render: function render() {
+		return _react2.default.createElement(
+			'h1',
+			null,
+			'Hello!!!world!!!'
+		);
+	}
+});
+
+_reactDom2.default.render(_react2.default.createElement(Hello, null), document.getElementById('content'));
