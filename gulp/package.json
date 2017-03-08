@@ -26,10 +26,12 @@
   },
   "dependencies": {
     "react": "^15.4.2",
+    "react-addons-css-transition-group": "^15.4.2",
     "react-dom": "^15.4.2"
   },
   "browser": {
     "react": "/Users/OZ/Documents/portfolio2017/gulp/node_modules/react",
+    "react-addons-css-transition-group": "/Users/OZ/Documents/portfolio2017/gulp/node_modules/react-addons-css-transition-group",
     "react-dom": "/Users/OZ/Documents/portfolio2017/gulp/node_modules/react-dom"
   }
 }
