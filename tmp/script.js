@@ -2,15 +2,15 @@
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require('../gulp/node_modules/react');
+var _react = require('../node_modules/react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = require('../gulp/node_modules/react-dom');
+var _reactDom = require('../node_modules/react-dom');
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _reactAddonsCssTransitionGroup = require('../gulp/node_modules/react-addons-css-transition-group');
+var _reactAddonsCssTransitionGroup = require('../node_modules/react-addons-css-transition-group');
 
 var _reactAddonsCssTransitionGroup2 = _interopRequireDefault(_reactAddonsCssTransitionGroup);
 
@@ -70,9 +70,9 @@ var works = [{
 }];
 
 /************************************************************************
- * 
+ *
  * 共通部分（ヘッダとか）
- * 
+ *
  ************************************************************************/
 // ヘッダ
 
@@ -168,15 +168,15 @@ var MenuList = function (_React$Component3) {
 }(_react2.default.Component);
 
 /************************************************************************
- * 
+ *
  * 各ページ
- * 
+ *
  ************************************************************************/
 
 /************************************************************************
- * 
+ *
  * トップ
- * 
+ *
  ************************************************************************/
 // 全体
 
@@ -220,9 +220,9 @@ var PageTop = function (_React$Component4) {
 }(_react2.default.Component);
 
 /************************************************************************
- * 
+ *
  * ワークス
- * 
+ *
  ************************************************************************/
 
 // 個別（詳細）
@@ -350,9 +350,9 @@ var PageWorks = function (_React$Component7) {
 }(_react2.default.Component);
 
 /************************************************************************
- * 
+ *
  * アバウト
- * 
+ *
  ************************************************************************/
 
 // 全体
@@ -454,9 +454,9 @@ var PageAbout = function (_React$Component8) {
 }(_react2.default.Component);
 
 /************************************************************************
- * 
+ *
  * スキルズ
- * 
+ *
  ************************************************************************/
 
 // 全体
@@ -490,9 +490,9 @@ var PageSkills = function (_React$Component9) {
 }(_react2.default.Component);
 
 /************************************************************************
- * 
+ *
  * コンタクト
- * 
+ *
  ************************************************************************/
 
 // 全体
@@ -561,9 +561,9 @@ var PageContact = function (_React$Component10) {
 }(_react2.default.Component);
 
 /************************************************************************
- * 
+ *
  * レンダリング
- * 
+ *
  ************************************************************************/
 
 

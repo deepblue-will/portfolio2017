@@ -1,6 +1,6 @@
-import React from '../gulp/node_modules/react';
-import ReactDOM from '../gulp/node_modules/react-dom';
-import ReactCSSTransitionGroup from '../gulp/node_modules/react-addons-css-transition-group';
+import React from '../node_modules/react';
+import ReactDOM from '../node_modules/react-dom';
+import ReactCSSTransitionGroup from '../node_modules/react-addons-css-transition-group';
 
 // const menulist = ['Top', 'Works', 'About', 'Skills', 'FAQ', 'Contact'];
 const menulist = ['Top', 'Works', 'About', 'Contact'];
@@ -57,9 +57,9 @@ const works = [
 ];
 
 /************************************************************************
- * 
+ *
  * 共通部分（ヘッダとか）
- * 
+ *
  ************************************************************************/
 // ヘッダ
 class Header extends React.Component {
@@ -108,15 +108,15 @@ class MenuList extends React.Component {
 }
 
 /************************************************************************
- * 
+ *
  * 各ページ
- * 
+ *
  ************************************************************************/
 
 /************************************************************************
- * 
+ *
  * トップ
- * 
+ *
  ************************************************************************/
 // 全体
 class PageTop extends React.Component {
@@ -136,9 +136,9 @@ class PageTop extends React.Component {
 }
 
 /************************************************************************
- * 
+ *
  * ワークス
- * 
+ *
  ************************************************************************/
 
 // 個別（詳細）
@@ -197,7 +197,7 @@ class PageWorks extends React.Component {
 		return (
 			<div className="page_content works">
 				{this.props.works.map(
-					work => 
+					work =>
 					<Work title={work.title} imgsrc={work.imgsrc} caption={work.caption} time={work.time} text={work.text} link={work.link} linktext={work.linktext} key={work.title} />
 				)}
 			</div>
@@ -206,9 +206,9 @@ class PageWorks extends React.Component {
 }
 
 /************************************************************************
- * 
+ *
  * アバウト
- * 
+ *
  ************************************************************************/
 
 // 全体
@@ -261,9 +261,9 @@ class PageAbout extends React.Component {
 }
 
 /************************************************************************
- * 
+ *
  * スキルズ
- * 
+ *
  ************************************************************************/
 
 // 全体
@@ -278,9 +278,9 @@ class PageSkills extends React.Component {
 }
 
 /************************************************************************
- * 
+ *
  * コンタクト
- * 
+ *
  ************************************************************************/
 
 // 全体
@@ -302,9 +302,9 @@ class PageContact extends React.Component {
 }
 
 /************************************************************************
- * 
+ *
  * レンダリング
- * 
+ *
  ************************************************************************/
 class Content extends React.Component {
 	constructor(props) {
@@ -405,4 +405,3 @@ ReactDOM.render(
 	<Content />,
 	document.getElementById('content')
 );
-
