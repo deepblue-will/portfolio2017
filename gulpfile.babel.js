@@ -1,12 +1,10 @@
 import gulp from 'gulp';
 import sass from 'gulp-sass';
 import babel from 'gulp-babel'
-import babelify from 'babelify';
 import browserify from 'browserify';
 import rename from 'gulp-rename';
 import sequence from 'run-sequence';
 import connect from 'gulp-connect';
-import sync	from 'browser-sync';
 import source from 'vinyl-source-stream';
 
 // Sassコンパイル
